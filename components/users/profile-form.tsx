@@ -11,7 +11,7 @@
 
 // import type { User } from "@supabase/supabase-js";
 
-// export function AccountForm({ user }: { user: User | null }) {
+// export function ProfileForm({ user }: { user: User | null }) {
 //   const router = useRouter();
 //   const [loading, setLoading] = useState(true);
 //   const [fullname, setFullname] = useState<string | null>(null);

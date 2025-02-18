@@ -3,8 +3,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Edit Profile | xprod",
-  description: "Edit your protected profile page.",
+  title: "Edit Profile",
+  description: "Edit my profile.",
 };
 
 export default function EditProfilePage() {

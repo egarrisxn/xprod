@@ -7,13 +7,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "My dashboard page.",
+  description: "My dashboard.",
 };
 
 export default function DashboardPage() {
   return (
     <div className="container mx-auto grid min-h-screen w-full grid-cols-1 place-items-center">
-      <div className="mx-auto flex flex-col justify-center gap-4 px-2 sm:px-6 xl:px-0">
+      <div className="mx-auto flex flex-col justify-center gap-4 p-2 sm:p-6 xl:px-0">
         <CalendarEvents />
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-1 flex-col">

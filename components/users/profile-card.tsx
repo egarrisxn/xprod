@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ArrowRight, Quote as QuoteIcon } from "lucide-react";
-import { SupabaseClient } from "@supabase/supabase-js";
 import { createClient } from "@/utils/supabase/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import quotes from "@/utils/xquotes.json";
+// import { SupabaseClient } from "@supabase/supabase-js";
+// import Image from "next/image";
 
 export default async function ProfileCard() {
   const supabase = await createClient();
@@ -19,60 +19,59 @@ export default async function ProfileCard() {
     redirect("/login");
   }
 
-  async function fetchAvatarUrl(supabase: SupabaseClient, uid: string) {
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("avatar_url")
-      .eq("id", uid)
-      .single();
+  // async function fetchAvatarUrl(supabase: SupabaseClient, uid: string) {
+  //   const { data, error } = await supabase
+  //     .from("profiles")
+  //     .select("avatar_url")
+  //     .eq("id", uid)
+  //     .single();
 
-    if (error || !data?.avatar_url) {
-      return { error: "Avatar not found or failed to load." };
-    }
+  //   if (error || !data?.avatar_url) {
+  //     return { error: "Avatar not found or failed to load." };
+  //   }
 
-    const { data: publicUrlData } = supabase.storage
-      .from("avatars")
-      .getPublicUrl(data.avatar_url);
+  //   const { data: publicUrlData } = supabase.storage
+  //     .from("avatars")
+  //     .getPublicUrl(data.avatar_url);
 
-    if (!publicUrlData?.publicUrl) {
-      return { error: "Failed to retrieve public URL." };
-    }
+  //   if (!publicUrlData?.publicUrl) {
+  //     return { error: "Failed to retrieve public URL." };
+  //   }
 
-    return { publicUrl: publicUrlData.publicUrl };
-  }
+  //   return { publicUrl: publicUrlData.publicUrl };
+  // }
 
-  async function AvatarDisplay({
-    supabase,
-    uid,
-  }: {
-    supabase: SupabaseClient;
-    uid: string;
-  }) {
-    const { publicUrl, error } = await fetchAvatarUrl(supabase, uid);
+  // async function AvatarDisplay({
+  //   supabase,
+  //   uid,
+  // }: {
+  //   supabase: SupabaseClient;
+  //   uid: string;
+  // }) {
+  //   const { publicUrl, error } = await fetchAvatarUrl(supabase, uid);
 
-    if (error || !publicUrl) {
-      return <p>{error || "Avatar not found or failed to load."}</p>;
-    }
+  //   if (error || !publicUrl) {
+  //     return <p>{error || "Avatar not found or failed to load."}</p>;
+  //   }
 
-    return (
-      <div>
-        <Image
-          src={publicUrl}
-          alt="User Avatar"
-          width={160}
-          height={160}
-          className="rounded-full object-cover"
-        />
-      </div>
-    );
-  }
+  //   return (
+  //     <div>
+  //       <Image
+  //         src={publicUrl}
+  //         alt="User Avatar"
+  //         width={160}
+  //         height={160}
+  //         className="rounded-full object-cover"
+  //       />
+  //     </div>
+  //   );
+  // }
 
-  // Fetch a random quote
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   return (
     <div className="mx-auto mb-16 flex max-w-4xl flex-col items-center justify-center gap-8 px-2 sm:rounded-lg sm:border sm:bg-card sm:px-8 sm:py-12 sm:shadow-lg dark:border-foreground">
-      <AvatarDisplay supabase={supabase} uid={user.id} />
+      {/* <AvatarDisplay supabase={supabase} uid={user.id} /> */}
       <div className="space-y-4 text-center">
         <h1 className="text-2xl font-semibold sm:text-5xl">
           Welcome back,{" "}

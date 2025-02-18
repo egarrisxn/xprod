@@ -46,9 +46,11 @@ export default async function MainNav() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent sideOffset={5}>
-                  <DropdownMenuLabel>Hello, World.</DropdownMenuLabel>
+                  <DropdownMenuLabel>
+                    {user.email?.split("@")[0] || "User"}
+                  </DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
+                  <DropdownMenuItem disabled asChild>
                     <Link className="cursor-pointer" href="/profile/edit">
                       Edit Profile
                     </Link>

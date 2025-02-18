@@ -1,4 +1,4 @@
-# xprod * is a work in progress *
+# xprod _ is a work in progress _
 
 ![xprod](https://github.com/user-attachments/assets/6408ffd3-433f-4b90-aad2-d1d847222f13)
 

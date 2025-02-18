@@ -10,3 +10,10 @@ export const formSchema = z.object({
 });
 
 export type FormValueType = z.infer<typeof formSchema>;
+
+// export const updateProfileSchema = z.object({
+//   userId: z.string(),
+//   name: z.string().nullable(),
+//   website: z.string().url().nullable(),
+//   avatar_url: z.string().nullable(),
+// });
