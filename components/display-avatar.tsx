@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { createClient } from "@/utils/supabase/server";
+
 import type { ProfileAvatarProps } from "@/utils/types";
 
 export default async function DisplayAvatar({

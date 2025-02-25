@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function GitHubRefinedIcon(props: any) {
   return (
     <svg
