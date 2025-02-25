@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { User } from "lucide-react";
 import { signOut } from "@/app/actions/auth";
 import { createClient } from "@/utils/supabase/server";
 import {
@@ -12,6 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import DisplayAvatar from "./display-avatar";
+import DisplayName from "@/components/display-name";
 
 export default async function MainNav() {
   const supabase = await createClient();
@@ -40,17 +41,18 @@ export default async function MainNav() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     size="icon"
-                    className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600"
+                    variant="ghost"
+                    className="size-10 rounded-full border-none bg-transparent"
                   >
-                    <User />
+                    <DisplayAvatar user={user} size={40} />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent sideOffset={5}>
                   <DropdownMenuLabel>
-                    {user.email?.split("@")[0] || "User"}
+                    <DisplayName user={user} />
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem disabled asChild>
+                  <DropdownMenuItem asChild>
                     <Link className="cursor-pointer" href="/profile/edit">
                       Edit Profile
                     </Link>

@@ -1,16 +1,15 @@
-import ProfileCard from "@/components/users/profile-card";
+import { createClient } from "@/utils/supabase/server";
+import ProfileCard from "@/components/profile/profile-card";
 
-import type { Metadata } from "next";
+export default async function ProfilePage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-export const metadata: Metadata = {
-  title: "Profile",
-  description: "My profile.",
-};
-
-export default function ProfilePage() {
   return (
-    <section className="container space-y-3">
-      <ProfileCard />
+    <section className="grid min-h-screen w-full place-items-center p-4 sm:p-6 lg:px-0">
+      <ProfileCard user={user} />
     </section>
   );
 }

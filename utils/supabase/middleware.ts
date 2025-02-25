@@ -1,11 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
-import { NextResponse, type NextRequest } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 const authRoutes = ["/login", "/register", "/auth-verify"];
 const secureRoutes = ["/profile", "profile/edit", "/dashboard"];
 
 export async function updateSession(request: NextRequest) {
-  let response = NextResponse.next({
+  let supabaseResponse = NextResponse.next({
     request: {
       headers: request.headers,
     },
@@ -23,11 +23,11 @@ export async function updateSession(request: NextRequest) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value),
           );
-          response = NextResponse.next({
+          supabaseResponse = NextResponse.next({
             request,
           });
           cookiesToSet.forEach(({ name, value, options }) =>
-            response.cookies.set(name, value, options),
+            supabaseResponse.cookies.set(name, value, options),
           );
         },
       },
@@ -39,10 +39,10 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   if (!user && authRoutes.some((e) => request.nextUrl.pathname.startsWith(e)))
-    return response;
+    return supabaseResponse;
 
   if (user && authRoutes.some((e) => request.nextUrl.pathname.startsWith(e)))
-    return NextResponse.redirect(new URL("/dashboard", request.url));
+    return NextResponse.redirect(new URL("/account", request.url));
 
   if (
     !user &&
@@ -51,5 +51,5 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  return response;
+  return supabaseResponse;
 }

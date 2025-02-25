@@ -5,7 +5,7 @@ import { signInWithEmail, signUpWithEmail } from "@/app/actions/auth";
 import { Form } from "@/components/ui/form";
 import { InputForm } from "@/components/ui/input-form";
 import { Button } from "@/components/ui/button";
-import { formSchema } from "@/utils/schema";
+import { authSchema } from "@/utils/schema";
 
 import type { FormValueType } from "@/utils/schema";
 import type { AuthFormProps } from "@/utils/types";
@@ -17,7 +17,7 @@ const defaultValues: FormValueType = {
 
 export default function UserAuth({ formType }: AuthFormProps) {
   const form = useForm<FormValueType>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(authSchema),
     defaultValues,
   });
 

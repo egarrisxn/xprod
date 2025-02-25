@@ -32,7 +32,7 @@ export async function addTodo(formData: FormData) {
       {
         task: formData.get("task") as string,
         is_complete: false,
-        created_at: new Date(),
+        inserted_at: new Date(),
         user_id: user?.id,
       },
     ])

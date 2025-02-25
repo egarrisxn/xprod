@@ -5,7 +5,7 @@ import { createClient } from "@/utils/supabase/server";
 
 import type { FormValueType } from "@/utils/schema";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
 
 //! Sign out user
 export async function signOut() {
@@ -36,7 +36,7 @@ export async function signInWithEmail(values: FormValueType) {
     redirect("/auth-error");
   }
   revalidatePath("/", "layout");
-  redirect("/dashboard");
+  redirect("/account");
 }
 
 //! Sign in user with GitHub
@@ -45,7 +45,7 @@ export async function authWithGitHub() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "github",
     options: {
-      redirectTo: `${baseUrl}/api/auth/callback`,
+      redirectTo: `${siteUrl}/api/auth/callback`,
     },
   });
   if (error) throw new Error(`Error signing in: ${error.message}`);
@@ -60,7 +60,7 @@ export async function authWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${baseUrl}/api/auth/callback`,
+      redirectTo: `${siteUrl}/api/auth/callback`,
     },
   });
   if (error) throw new Error(`Error signing in: ${error.message}`);

@@ -7,6 +7,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ilguvbltlgafvgxgpdbl.supabase.co",
       },
+      {
+        protocol: "https",
+        hostname: "pxtynmefyaicqlkzbpai.supabase.co",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
     ],
   },
 };

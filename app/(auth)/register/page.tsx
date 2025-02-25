@@ -1,7 +1,7 @@
 import Link from "next/link";
-import EmailAuth from "@/components/users/email-auth";
-import GitHubAuth from "@/components/users/github-auth";
-import GoogleAuth from "@/components/users/google-auth";
+import EmailAuth from "@/components/auth/email-auth";
+import GitHubAuth from "@/components/auth/github-auth";
+import GoogleAuth from "@/components/auth/google-auth";
 import {
   Card,
   CardContent,

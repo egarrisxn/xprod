@@ -16,26 +16,27 @@ export interface AuthFormProps {
   formType: "login" | "register";
 }
 
-export interface Quote {
-  content: string;
-  author: string;
+export interface ProfileData {
+  full_name: string | null;
+  username: string | null;
+  website: string | null;
+  avatar_url: string | null;
 }
 
-export interface Timer {
-  id: number;
-  mode: "work" | "shortBreak" | "longBreak";
-  duration: number;
-  started_at: Date;
-  is_complete: boolean;
-  created_at: Date;
-  user_id: string;
+export interface ProfileAvatarProps {
+  size?: number;
+}
+
+export interface Quote {
+  readonly content: string;
+  readonly author: string;
 }
 
 export interface Todo {
   id: number;
   task: string;
   is_complete: boolean;
-  created_at: Date;
+  inserted_at: Date;
   user_id: string;
 }
 
@@ -56,39 +57,12 @@ export interface Event {
   user_id: string;
 }
 
-// export interface Habit {
-//   id: number;
-//   mode: "filled" | "empty";
-//   name: string;
-//   is_complete: string[];
-//   streak?: number;
-//   created_at: Date;
-//   user_id: string;
-// }
-
-// export interface HabitrProps {
-//   defaultHabits: Habit[];
-// }
-
-// export interface Bookmark {
-//   id: number;
-//   user_id: string;
-//   title: string;
-//   url: string;
-//   image_url: string;
-//   inserted_at: Date;
-// }
-
-// export interface BookmarkRowProps {
-//   bookmark: Bookmark;
-//   // eslint-disable-next-line no-unused-vars
-//   copyLink: (link: string) => void;
-//   // eslint-disable-next-line no-unused-vars
-//   editBookmark: (id: number, newTitle: string, newUrl: string) => void;
-//   // eslint-disable-next-line no-unused-vars
-//   deleteBookmark: (id: number) => void;
-// }
-
-// export interface BookmarksListProps {
-//   defaultBookmarks: Bookmark[];
-// }
+export interface Timer {
+  id: number;
+  mode: "work" | "shortBreak" | "longBreak";
+  duration: number;
+  started_at: Date;
+  is_complete: boolean;
+  created_at: Date;
+  user_id: string;
+}

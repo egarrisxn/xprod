@@ -1,19 +1,19 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${baseUrl}`,
+      url: `${siteUrl}`,
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/login`,
+      url: `${siteUrl}/login`,
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/register`,
+      url: `${siteUrl}/register`,
       lastModified: new Date(),
     },
   ];
