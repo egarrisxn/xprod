@@ -26,14 +26,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  creator: siteConfig.links.website,
   referrer: "origin-when-cross-origin",
-  authors: [
-    {
-      name: "Ethan G.",
-      url: "https://egxo.dev",
-    },
-  ],
-  creator: "https://egxo.dev",
   keywords: [
     "Next.js",
     "React",
@@ -44,14 +38,6 @@ export const metadata: Metadata = {
     "shadcn-ui",
     "productivity",
   ],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
