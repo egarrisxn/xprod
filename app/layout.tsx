@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       url: "https://egxo.dev",
     },
   ],
-  creator: "Ethan G.",
+  creator: "https://egxo.dev",
   keywords: [
     "Next.js",
     "React",
@@ -52,20 +52,11 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-      { url: "/icon.png", sizes: "96x96", type: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [siteConfig.ogImage],
     type: "website",
     locale: "en_US",
   },
@@ -75,7 +66,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     creator: siteConfig.socialHandle,
     site: siteConfig.socialHandle,
-    images: [siteConfig.twitterImage],
   },
   appleWebApp: {
     capable: true,
@@ -100,11 +90,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

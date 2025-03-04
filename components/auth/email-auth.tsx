@@ -38,13 +38,7 @@ export default function UserAuth({ formType }: AuthFormProps) {
             description=""
             required
           />
-          <InputForm
-            type="password"
-            label="Password"
-            name="password"
-            description=""
-            required
-          />
+          <InputForm type="password" label="Password" name="password" description="" required />
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"

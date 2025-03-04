@@ -1,10 +1,6 @@
 import AuthNav from "@/components/auth-nav";
 
-export default function AuthLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <AuthNav />

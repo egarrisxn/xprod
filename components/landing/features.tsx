@@ -3,20 +3,17 @@ import { CalendarDays, CheckSquare, FileText } from "lucide-react";
 const features = [
   {
     name: "Smart Calendar",
-    description:
-      "Intelligent scheduling with customizable views and event management.",
+    description: "Intelligent scheduling with customizable views and event management.",
     icon: CalendarDays,
   },
   {
     name: "Task Management",
-    description:
-      "Organize your tasks with priority levels, due dates, and progress tracking.",
+    description: "Organize your tasks with priority levels, due dates, and progress tracking.",
     icon: CheckSquare,
   },
   {
     name: "Notes & Documents",
-    description:
-      "Create, edit, and organize your notes with rich text formatting.",
+    description: "Create, edit, and organize your notes with rich text formatting.",
     icon: FileText,
   },
 ];
@@ -33,23 +30,16 @@ export function Features() {
             All Your Productivity Tools in One Place
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground xl:text-xl">
-            Seamlessly integrate your calendar, tasks, and notes into a single,
-            powerful workspace.
+            Seamlessly integrate your calendar, tasks, and notes into a single, powerful workspace.
           </p>
         </div>
 
         <div className="mx-auto mt-16 max-w-2xl lg:mt-20 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
-              <div
-                key={feature.name}
-                className="flex flex-col rounded p-6 shadow-inner"
-              >
+              <div key={feature.name} className="flex flex-col rounded p-6 shadow-inner">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 lg:text-lg">
-                  <feature.icon
-                    className="size-6 flex-none text-indigo-500"
-                    aria-hidden="true"
-                  />
+                  <feature.icon className="size-6 flex-none text-indigo-500" aria-hidden="true" />
                   {feature.name}
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-sm leading-7 text-muted-foreground lg:text-base">

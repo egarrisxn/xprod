@@ -7,8 +7,7 @@ import type { Note } from "@/utils/types";
 export function NoteInput({ note }: { note: Note }) {
   const [description, setDescription] = React.useState(note.thought);
 
-  const [typingTimeout, setTypingTimeout] =
-    React.useState<NodeJS.Timeout | null>(null);
+  const [typingTimeout, setTypingTimeout] = React.useState<NodeJS.Timeout | null>(null);
 
   React.useEffect(() => {
     setDescription(note.thought);

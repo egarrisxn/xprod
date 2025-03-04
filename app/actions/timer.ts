@@ -20,10 +20,7 @@ export async function getSessions() {
 }
 
 //! Add timer sessions
-export async function addSession(
-  mode: "work" | "shortBreak" | "longBreak",
-  duration: number,
-) {
+export async function addSession(mode: "work" | "shortBreak" | "longBreak", duration: number) {
   const supabase = await createClient();
   const {
     data: { user },
@@ -74,11 +71,7 @@ export async function deleteSession(id: number) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { error } = await supabase
-    .from("timer")
-    .delete()
-    .eq("id", id)
-    .eq("user_id", user?.id);
+  const { error } = await supabase.from("timer").delete().eq("id", id).eq("user_id", user?.id);
   if (error) {
     console.error("Error deleting session:", error);
     return false;

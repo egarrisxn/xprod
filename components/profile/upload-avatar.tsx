@@ -33,9 +33,7 @@ export default function UploadAvatar({
     if (url) getPublicUrl(url);
   }, [url, supabase]);
 
-  const uploadAvatar: React.ChangeEventHandler<HTMLInputElement> = async (
-    event,
-  ) => {
+  const uploadAvatar: React.ChangeEventHandler<HTMLInputElement> = async (event) => {
     try {
       setUploading(true);
 
@@ -47,9 +45,7 @@ export default function UploadAvatar({
       const fileExt = file.name.split(".").pop();
       const filePath = `${uid}-${Math.random()}.${fileExt}`;
 
-      const { error: uploadError } = await supabase.storage
-        .from("avatars")
-        .upload(filePath, file);
+      const { error: uploadError } = await supabase.storage.from("avatars").upload(filePath, file);
 
       if (uploadError) {
         throw uploadError;
@@ -66,10 +62,7 @@ export default function UploadAvatar({
 
   return (
     <div className="flex flex-col items-center">
-      <div
-        className="relative rounded-full border-2 shadow"
-        style={{ width: size, height: size }}
-      >
+      <div className="relative rounded-full border-2 shadow" style={{ width: size, height: size }}>
         {avatarUrl ? (
           <Image
             src={avatarUrl}

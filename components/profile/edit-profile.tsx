@@ -54,12 +54,7 @@ export default function EditProfile({
     <div className="mx-auto mb-16 flex max-w-4xl flex-col items-center justify-center gap-4 px-2 sm:rounded-lg sm:border sm:bg-card sm:px-12 sm:py-8 sm:shadow-lg dark:border-foreground">
       <h1 className="text-center text-2xl font-bold">Edit Profile</h1>
       <form className="mx-auto mb-16 flex max-w-4xl flex-col items-center justify-center gap-8 px-2 sm:rounded-lg sm:bg-card sm:px-8 sm:pt-4">
-        <UploadAvatar
-          uid={user?.id ?? null}
-          url={avatarUrl}
-          size={160}
-          onUpload={setAvatarUrl}
-        />
+        <UploadAvatar uid={user?.id ?? null} url={avatarUrl} size={160} onUpload={setAvatarUrl} />
         <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="email" className="text-sm font-medium">
@@ -67,13 +62,7 @@ export default function EditProfile({
             </Label>
             <div className="relative">
               <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                id="email"
-                type="text"
-                value={user?.email}
-                disabled
-                className="pl-10"
-              />{" "}
+              <Input id="email" type="text" value={user?.email} disabled className="pl-10" />{" "}
             </div>
           </div>
           <div className="space-y-2">

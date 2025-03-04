@@ -7,10 +7,7 @@ export default function Footer() {
     <footer className="w-full">
       <div className="container flex items-center justify-between p-4 sm:p-6 lg:p-8">
         <div className="flex flex-row items-center gap-2.5 pl-0.5">
-          <a
-            href="https://github.com/egarrisxn/xprod"
-            className="duration-200 hover:opacity-50"
-          >
+          <a href="https://github.com/egarrisxn/xprod" className="duration-200 hover:opacity-50">
             <GitHubIcon className="size-5" />
           </a>
           <p>EG | {new Date().getFullYear()}</p>

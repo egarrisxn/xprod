@@ -8,10 +8,7 @@ export default function AuthErrorPage() {
         <h2 className="mb-5 text-2xl font-semibold text-black md:text-4xl dark:text-white">
           There seems to be a problem.
         </h2>
-        <p>
-          If you believe there is a mistake, please send me an email at
-          egarrisxn@gmail.com.
-        </p>
+        <p>If you believe there is a mistake, please send me an email at egarrisxn@gmail.com.</p>
         <Button asChild>
           <Link href="/">Return Home</Link>
         </Button>

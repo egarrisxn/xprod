@@ -22,9 +22,7 @@ export default async function DisplayAvatar({
       return null;
     }
 
-    const { data: publicUrlData } = supabase.storage
-      .from("avatars")
-      .getPublicUrl(data.avatar_url);
+    const { data: publicUrlData } = supabase.storage.from("avatars").getPublicUrl(data.avatar_url);
 
     return publicUrlData?.publicUrl || null;
   }

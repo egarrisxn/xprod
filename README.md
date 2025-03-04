@@ -53,7 +53,7 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/yourusername/xprod.git
+   git clone https://github.com/egarrisxn/xprod.git
    ```
 
 2. Navigate to the project directory:
@@ -98,7 +98,7 @@ To get a local copy up and running, follow these simple steps.
   pnpm format
   ```
 
-## **Linting**
+## Linting
 
 `pnpm run next-lint`: a backup of the original next.js linting command
 
@@ -114,18 +114,18 @@ To get a local copy up and running, follow these simple steps.
 
 `pnpm run lint-inspect-config`: will open `http://localhost:7777/` in your browser, which is a tool to help you visualize the content of our ESLint config
 
-## **Deployment**
+## Deployment
 
 Deploy the project on a hosting platform that supports Next.js, such as Vercel, Netlify, or any other cloud provider. Ensure you have set up your environment variables correctly on the hosting platform.
 
-## **Contributing**
+## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
 
-## **License**
+## License
 
 This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## **Contact**
+## Contact
 
 If you have any questions or need further assistance, feel free to reach out via GitHub: [egarrisxn](https://github.com/egarrisxn) and/or Email: [egarrisxn@gmail.com](mailto:egarrisxn@gmail.com).

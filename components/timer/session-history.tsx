@@ -49,9 +49,7 @@ export function SessionHistory() {
       <CardContent>
         {loading && <p>Loading sessions...</p>}
         {error && <p className="text-red-500">{error}</p>}
-        {!loading && !error && sessions.length === 0 && (
-          <p>No sessions available.</p>
-        )}
+        {!loading && !error && sessions.length === 0 && <p>No sessions available.</p>}
 
         {sessions.length > 0 ? (
           <ul className="space-y-2">

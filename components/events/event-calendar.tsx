@@ -38,12 +38,7 @@ function EventItem({
           <Edit className="size-3" />
           <span className="sr-only">Edit event</span>
         </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="size-4 text-red-400"
-          onClick={onDelete}
-        >
+        <Button variant="ghost" size="icon" className="size-4 text-red-400" onClick={onDelete}>
           <Trash2 className="size-3" />
           <span className="sr-only">Delete event</span>
         </Button>
@@ -82,9 +77,7 @@ export function EventCalendar() {
   const [date, setDate] = useState<Date>(new Date());
   const [isLoading, setIsLoading] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState<Event | undefined>(
-    undefined,
-  );
+  const [selectedEvent, setSelectedEvent] = useState<Event | undefined>(undefined);
 
   const fetchEvents = useCallback(async (selectedDate: Date) => {
     setIsLoading(true);
@@ -143,9 +136,7 @@ export function EventCalendar() {
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle>
-                {selectedEvent ? "Edit Event" : "Add New Event"}
-              </DialogTitle>
+              <DialogTitle>{selectedEvent ? "Edit Event" : "Add New Event"}</DialogTitle>
             </DialogHeader>
             <EventForm
               event={selectedEvent}

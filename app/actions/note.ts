@@ -11,10 +11,7 @@ export async function getNotes(): Promise<Note[]> {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data, error } = await supabase
-    .from("notes")
-    .select("*")
-    .eq("user_id", user?.id);
+  const { data, error } = await supabase.from("notes").select("*").eq("user_id", user?.id);
   if (error) throw new Error(`Error fetching notes: ${error.message}`);
   return data || [];
 }

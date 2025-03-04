@@ -24,9 +24,7 @@ export default function LoginPage() {
     <section className="grid place-items-center">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="space-y-1 text-center">
-          <CardTitle className="text-2xl font-bold tracking-tight">
-            Welcome back!
-          </CardTitle>
+          <CardTitle className="text-2xl font-bold tracking-tight">Welcome back!</CardTitle>
           <CardDescription>Log in to your account to continue.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -36,9 +34,7 @@ export default function LoginPage() {
               <Separator />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-background px-2 text-muted-foreground">
-                Or continue with
-              </span>
+              <span className="bg-background px-2 text-muted-foreground">Or continue with</span>
             </div>
           </div>
           <div className="flex flex-row items-center justify-center space-x-4 pt-4">
@@ -48,10 +44,7 @@ export default function LoginPage() {
         </CardContent>
         <CardFooter className="flex flex-row justify-center gap-1 text-center">
           <p>Don&apos;t have an account?</p>
-          <Link
-            href="/register"
-            className="text-primary underline-offset-4 hover:underline"
-          >
+          <Link href="/register" className="text-primary underline-offset-4 hover:underline">
             Sign up!
           </Link>
         </CardFooter>

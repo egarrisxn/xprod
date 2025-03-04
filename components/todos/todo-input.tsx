@@ -7,9 +7,7 @@ import type { Todo } from "@/utils/types";
 
 export function TodoInput({ todo }: { todo: Todo }) {
   const [description, setDescription] = useState(todo.task);
-  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(
-    null,
-  );
+  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setDescription(todo.task);

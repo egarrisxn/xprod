@@ -11,10 +11,7 @@ export async function getTodos(): Promise<Todo[]> {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data, error } = await supabase
-    .from("todos")
-    .select("*")
-    .eq("user_id", user?.id);
+  const { data, error } = await supabase.from("todos").select("*").eq("user_id", user?.id);
   if (error) throw new Error(`Error fetching to-dos: ${error.message}`);
   return data || [];
 }
@@ -68,12 +65,8 @@ export async function deleteTodo(id: number) {
 //! Delete completed to-dos
 export async function deleteCompletedTodos() {
   const supabase = await createClient();
-  const { error } = await supabase
-    .from("todos")
-    .delete()
-    .eq("is_complete", true);
-  if (error)
-    throw new Error(`Error deleting completed to-dos: ${error.message}`);
+  const { error } = await supabase.from("todos").delete().eq("is_complete", true);
+  if (error) throw new Error(`Error deleting completed to-dos: ${error.message}`);
   revalidatePath("/dashboard");
 }
 
@@ -83,10 +76,7 @@ export async function deleteAllTodos() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const { error } = await supabase
-    .from("todos")
-    .delete()
-    .eq("user_id", user?.id);
+  const { error } = await supabase.from("todos").delete().eq("user_id", user?.id);
   if (error) throw new Error(`Error deleting all to-dos: ${error.message}`);
   revalidatePath("/dashboard");
 }

@@ -19,12 +19,7 @@ export async function getEvents(date: string) {
 }
 
 //! Add event
-export async function addEvent(
-  title: string,
-  description: string,
-  time: string,
-  date: string,
-) {
+export async function addEvent(title: string, description: string, time: string, date: string) {
   const supabase = await createClient();
   const {
     data: { user },
@@ -51,12 +46,7 @@ export async function addEvent(
 }
 
 //! Update event
-export async function updateEvent(
-  id: number,
-  title: string,
-  description: string,
-  time: string,
-) {
+export async function updateEvent(id: number, title: string, description: string, time: string) {
   const supabase = await createClient();
   const {
     data: { user },
@@ -86,11 +76,7 @@ export async function deleteEvent(id: number) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { error } = await supabase
-    .from("events")
-    .delete()
-    .eq("id", id)
-    .eq("user_id", user?.id);
+  const { error } = await supabase.from("events").delete().eq("id", id).eq("user_id", user?.id);
   if (error) {
     console.error("Error deleting event:", error);
     return false;

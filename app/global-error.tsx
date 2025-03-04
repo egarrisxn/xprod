@@ -23,8 +23,7 @@ export default function Error({
                 There seems to be a problem.
               </h2>
               <p>
-                If you believe there is a mistake, please send me an email at
-                egarrisxn@gmail.com.
+                If you believe there is a mistake, please send me an email at egarrisxn@gmail.com.
               </p>
               <Button onClick={() => reset()}>Try Again</Button>
             </div>

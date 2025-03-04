@@ -2,13 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { addSession, completeSession } from "@/app/actions/timer";
 import { formatSessionTimer } from "@/utils/helpers";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const WORK_TIME = 25 * 60;
@@ -71,17 +65,11 @@ export function SessionTimer() {
         <CardTitle
           className={`text-3xl font-bold ${mode === "work" ? "text-[#ff6961]" : mode === "shortBreak" ? "text-[#80ef80]" : "text-[#a2bffe]"}`}
         >
-          {mode === "work"
-            ? "Work Session"
-            : mode === "shortBreak"
-              ? "Short Break"
-              : "Long Break"}
+          {mode === "work" ? "Work Session" : mode === "shortBreak" ? "Short Break" : "Long Break"}
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="text-5xl font-semibold">
-          {formatSessionTimer(timeLeft)}
-        </div>
+        <div className="text-5xl font-semibold">{formatSessionTimer(timeLeft)}</div>
         <div className="mt-6 flex justify-center gap-4">
           <Button
             className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600"
@@ -96,9 +84,8 @@ export function SessionTimer() {
       </CardContent>
       <CardFooter>
         <p className="mx-auto max-w-80 text-wrap p-0.5 text-sm text-muted-foreground">
-          <span className="text-foreground">Routine: </span> You will do 25
-          minutes on and 5 minutes off for three sessions, then 25 minutes on
-          and 15 minutes off for one session.
+          <span className="text-foreground">Routine: </span> You will do 25 minutes on and 5 minutes
+          off for three sessions, then 25 minutes on and 15 minutes off for one session.
         </p>
       </CardFooter>
     </Card>

@@ -10,9 +10,8 @@ export function CallToAction() {
             Start your day with purpose and make it yours!
           </p>
           <p className="mt-4 text-lg leading-8 text-muted-foreground sm:mt-6 lg:mx-4 xl:mt-8 xl:text-xl">
-            No more reaching for an array of applications to keep your day in
-            order. Everything you need is right here! We got you covered, so
-            what are you waiting for?!
+            No more reaching for an array of applications to keep your day in order. Everything you
+            need is right here! We got you covered, so what are you waiting for?!
           </p>
           <div className="mt-6 flex items-center justify-center sm:mt-10">
             <Button

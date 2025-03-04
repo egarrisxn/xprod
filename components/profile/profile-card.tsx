@@ -19,21 +19,15 @@ export default function ProfileCard({ user }: { user: any }) {
             <DisplayName user={user} />
           </span>
         </h1>
-        <p className="text-muted-foreground sm:text-lg">
-          Ready to boost your productivity today?
-        </p>
+        <p className="text-muted-foreground sm:text-lg">Ready to boost your productivity today?</p>
       </div>
       <Card className="max-w-xl">
         <CardContent className="pt-5 sm:pt-6">
           <div className="flex gap-3 sm:gap-4">
             <QuoteIcon className="size-6 flex-shrink-0 text-indigo-500 sm:size-8" />
             <div className="flex flex-col gap-1 sm:gap-2">
-              <p className="text-wrap italic sm:text-lg">
-                {randomQuote.content}
-              </p>
-              <p className="text-wrap text-sm text-muted-foreground">
-                ― {randomQuote.author}
-              </p>
+              <p className="text-wrap italic sm:text-lg">{randomQuote.content}</p>
+              <p className="text-wrap text-sm text-muted-foreground">― {randomQuote.author}</p>
             </div>
           </div>
         </CardContent>

@@ -13,8 +13,8 @@ export function Hero() {
             The Ultimate Productivity Companion
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground xl:mt-10 xl:text-2xl">
-            Streamline your workflow with our all-in-one productivity solution.
-            Manage your calendar, tasks, and notes in one beautiful interface.
+            Streamline your workflow with our all-in-one productivity solution. Manage your
+            calendar, tasks, and notes in one beautiful interface.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4 lg:gap-6 xl:mt-12">
             <Button
