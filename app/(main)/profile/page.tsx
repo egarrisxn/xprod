@@ -8,8 +8,8 @@ export default async function ProfilePage() {
   } = await supabase.auth.getUser();
 
   return (
-    <div className="grid min-h-screen w-full place-items-center">
+    <section className="grid min-h-screen w-full place-items-center">
       <ProfileCard user={user} />
-    </div>
+    </section>
   );
 }

@@ -31,11 +31,11 @@ export interface User {
 
 export interface ProfileAvatarProps {
   size?: number;
-  user: User;
+  user: User | null;
 }
 
 export interface ProfileCardProps {
-  user: User;
+  user: User | null;
 }
 
 export interface Quote {

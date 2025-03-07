@@ -5,7 +5,7 @@ import ModeToggle from "./theme-toggle";
 
 export default function AuthNav() {
   return (
-    <header className="w-full">
+    <header className="absolute top-0 z-50 w-full">
       <div className="container flex items-center justify-between p-4 sm:px-6">
         <Button variant="outline" asChild>
           <Link href="/">

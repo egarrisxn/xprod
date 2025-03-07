@@ -12,9 +12,10 @@ export function Hero() {
           <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text py-1 text-6xl font-bold tracking-tight text-transparent sm:text-6xl lg:text-8xl xl:text-[7rem]">
             The Ultimate Productivity Companion
           </h1>
-          <p className="mt-6 text-lg leading-7 text-muted-foreground xl:mt-8 xl:text-2xl">
-            Streamline your workflow with our all-in-one productivity solution. Manage your
-            calendar, tasks, and notes in one beautiful interface.
+          <p className="mt-4 text-lg leading-7 text-muted-foreground xl:mt-6 xl:text-2xl">
+            Streamline your workflow with our <span className="text-primary">all-in-one</span>{" "}
+            productivity solution. Manage your calendar, tasks, notes, and more all within one
+            beautiful interface.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4 lg:gap-6 xl:mt-12">
             <Button

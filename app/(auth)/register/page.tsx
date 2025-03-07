@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RegisterPage() {
   return (
-    <section className="grid place-items-center">
+    <section className="mx-auto grid min-h-screen w-full place-items-center">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-2xl font-bold tracking-tight">Welcome in!</CardTitle>

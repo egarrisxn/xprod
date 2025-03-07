@@ -9,10 +9,10 @@ export function Examples() {
       <div className="mx-auto max-w-7xl px-6 pb-32 pt-28 lg:pt-24">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="text-base font-semibold leading-7 text-indigo-500">Here&apos;s A Glipse</p>
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Into your brand new favorite application
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+          <p className="mt-2 text-lg leading-8 text-muted-foreground">
             Dark mode theme is just one of the many great features we have to offer.
           </p>
         </div>

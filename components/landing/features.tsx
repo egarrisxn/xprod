@@ -26,10 +26,10 @@ export function Features() {
           <p className="lg text-base font-semibold leading-7 text-indigo-500">
             Everything You Need
           </p>
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl xl:text-6xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl xl:text-6xl">
             All Your Productivity Tools in One Place
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground xl:text-xl">
+          <p className="mt-4 text-lg leading-8 text-muted-foreground xl:text-xl">
             Seamlessly integrate your calendar, tasks, and notes into a single, powerful workspace.
           </p>
         </div>
