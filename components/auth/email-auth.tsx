@@ -2,12 +2,11 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInWithEmail, signUpWithEmail } from "@/app/actions/auth";
+import { type FormValueType, authSchema } from "@/utils/schema";
+import type { AuthFormProps } from "@/utils/types";
 import { Form } from "@/components/ui/form";
 import { InputForm } from "@/components/ui/input-form";
 import { Button } from "@/components/ui/button";
-import { authSchema } from "@/utils/schema";
-import type { FormValueType } from "@/utils/schema";
-import type { AuthFormProps } from "@/utils/types";
 
 const defaultValues: FormValueType = {
   email: "",
