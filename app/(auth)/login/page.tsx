@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import EmailAuth from "@/components/auth/email-auth";
 import GitHubAuth from "@/components/auth/github-auth";
@@ -11,8 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Login | xprod",

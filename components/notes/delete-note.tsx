@@ -1,4 +1,5 @@
 "use client";
+
 import { Trash2 } from "lucide-react";
 import { deleteNote } from "@/app/actions/note";
 import { Button } from "@/components/ui/button";

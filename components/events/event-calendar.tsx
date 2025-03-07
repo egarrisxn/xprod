@@ -1,9 +1,9 @@
 "use client";
+
 import { useState, useEffect, useCallback } from "react";
 import { Loader2, Plus, Edit, Trash2 } from "lucide-react";
 import { getEvents, deleteEvent } from "@/app/actions/event";
 import { formatCalendarDate } from "@/utils/helpers";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -11,10 +11,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { EventForm } from "./event-form";
-
 import type { Event } from "@/utils/types";
 
 function EventItem({

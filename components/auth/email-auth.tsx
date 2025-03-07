@@ -6,7 +6,6 @@ import { Form } from "@/components/ui/form";
 import { InputForm } from "@/components/ui/input-form";
 import { Button } from "@/components/ui/button";
 import { authSchema } from "@/utils/schema";
-
 import type { FormValueType } from "@/utils/schema";
 import type { AuthFormProps } from "@/utils/types";
 

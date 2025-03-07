@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, Quote as QuoteIcon } from "lucide-react";
+import quotes from "@/utils/xquotes.json";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import DisplayAvatar from "@/components/display-avatar";
 import DisplayName from "@/components/display-name";
-import quotes from "@/utils/xquotes.json";
 
 export default function ProfileCard({ user }: { user: any }) {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];

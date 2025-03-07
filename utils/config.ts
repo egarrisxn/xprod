@@ -1,6 +1,5 @@
 import type { SiteConfig } from "./types";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+import { siteUrl } from "@/utils/env";
 
 export const siteConfig: SiteConfig = {
   name: "xprod",

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { createClient } from "@/utils/supabase/server";
-
 import type { ProfileAvatarProps } from "@/utils/types";
 
 export default async function DisplayAvatar({
@@ -35,7 +34,7 @@ export default async function DisplayAvatar({
       style={{ width: size, height: size }}
     >
       <Image
-        src={avatarUrl || "/icons/default-avatar.svg"}
+        src={avatarUrl || "/svgs/default-avatar.svg"}
         alt="User Avatar"
         width={size}
         height={size}

@@ -1,15 +1,16 @@
 "use client";
-import * as React from "react";
+
+import React, { useState, useEffect } from "react";
 import { editNote } from "@/app/actions/note";
 import { Input } from "@/components/ui/input";
 import type { Note } from "@/utils/types";
 
 export function NoteInput({ note }: { note: Note }) {
-  const [description, setDescription] = React.useState(note.thought);
+  const [description, setDescription] = useState(note.thought);
 
-  const [typingTimeout, setTypingTimeout] = React.useState<NodeJS.Timeout | null>(null);
+  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setDescription(note.thought);
   }, [note.thought]);
 

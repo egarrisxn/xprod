@@ -1,11 +1,10 @@
 "use server";
+
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
-
+import { siteUrl } from "@/utils/env";
 import type { FormValueType } from "@/utils/schema";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
 
 //! Sign out user
 export async function signOut() {

@@ -1,9 +1,8 @@
+import type { Metadata } from "next";
 import PomodoroTimer from "@/components/timer/pomodoro-timer";
 import QuickNotes from "@/components/notes/quick-notes";
 import TodoList from "@/components/todos/todo-list";
 import CalendarEvents from "@/components/events/calendar-events";
-
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Dashboard",

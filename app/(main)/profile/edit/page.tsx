@@ -1,7 +1,6 @@
+import type { Metadata } from "next";
 import { createClient } from "@/utils/supabase/server";
 import EditProfile from "@/components/profile/edit-profile";
-
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Edit Profile",

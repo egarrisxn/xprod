@@ -5,22 +5,49 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "xprod",
     short_name: "xprod",
     description: "The All-In-One Productivity App!",
+    id: "/",
     start_url: "/",
-    display: "standalone",
     theme_color: "#000000",
     background_color: "#000000",
+    orientation: "any",
+    display: "standalone",
     icons: [
       {
-        src: "/web-app-manifest-192x192.png",
+        src: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/icons/icon-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/web-app-manifest-512x512.png",
+        src: "/icons/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/icons/icon-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
+      },
+    ],
+    screenshots: [
+      {
+        src: "/screenshots/desktop.png",
+        sizes: "1920x1080",
+        type: "image/png",
+        form_factor: "wide",
+      },
+      {
+        src: "/screenshots/mobile.png",
+        sizes: "750x1334",
+        type: "image/png",
       },
     ],
   };

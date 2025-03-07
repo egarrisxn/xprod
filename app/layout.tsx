@@ -1,10 +1,9 @@
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/providers";
 import { siteConfig } from "@/utils/config";
-
-import type { Metadata, Viewport } from "next";
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -66,7 +65,6 @@ export const metadata: Metadata = {
     email: true,
     url: true,
   },
-  appLinks: {},
 };
 
 export const viewport: Viewport = {
@@ -89,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Toaster position="top-center" reverseOrder={true} />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

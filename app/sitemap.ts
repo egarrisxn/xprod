@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL!;
+import { siteUrl } from "@/utils/env";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${siteUrl}`,
+      url: siteUrl,
       lastModified: new Date(),
     },
     {

@@ -1,16 +1,16 @@
 "use client";
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Mail, User as UserIcon, Globe, AtSign } from "lucide-react";
+import toast from "react-hot-toast";
+import type { User } from "@supabase/supabase-js";
+import type { ProfileData } from "@/utils/types";
 import { createClient } from "@/utils/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import UploadAvatar from "./upload-avatar";
-import toast from "react-hot-toast";
-
-import type { User } from "@supabase/supabase-js";
-import type { ProfileData } from "@/utils/types";
 
 export default function EditProfile({
   user,

@@ -1,9 +1,9 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { editTodo } from "@/app/actions/todo";
-import { Input } from "@/components/ui/input";
-
 import type { Todo } from "@/utils/types";
+import { Input } from "@/components/ui/input";
 
 export function TodoInput({ todo }: { todo: Todo }) {
   const [description, setDescription] = useState(todo.task);

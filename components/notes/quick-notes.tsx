@@ -3,7 +3,6 @@ import { getNotes, editNote } from "@/app/actions/note";
 import { AddNote } from "./add-note";
 import { DeleteNote } from "./delete-note";
 import { NoteInput } from "./note-input";
-
 import type { Note } from "@/utils/types";
 
 async function Note({ note }: { note: Note }) {

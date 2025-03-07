@@ -1,12 +1,11 @@
 import { List } from "lucide-react";
 import { getTodos, editTodo } from "@/app/actions/todo";
+import type { Todo } from "@/utils/types";
 import { AddTodo } from "./add-todo";
 import { ClearTodos } from "./clear-todos";
 import { TodoInput } from "./todo-input";
 import { TodoCheckbox } from "./todo-checkbox";
 import { DeleteTodo } from "./delete-todo";
-
-import type { Todo } from "@/utils/types";
 
 async function Todo({ todo }: { todo: Todo }) {
   return (

@@ -1,7 +1,7 @@
 "use server";
+
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/utils/supabase/server";
-
 import type { Note } from "@/utils/types";
 
 //! Get notes

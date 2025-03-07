@@ -11,7 +11,7 @@ export default function GitHubAuth() {
           variant="outline"
           className="w-full bg-white text-black dark:hover:bg-slate-300 dark:hover:text-black"
         >
-          <Image src="/icons/github.svg" alt="GitHub" width={20} height={20} className="mr-2" />
+          <Image src="/svgs/github.svg" alt="GitHub" width={20} height={20} className="mr-2" />
           GitHub
         </Button>
       </form>

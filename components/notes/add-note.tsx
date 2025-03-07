@@ -1,12 +1,13 @@
 "use client";
-import * as React from "react";
+
+import { useRef } from "react";
 import { addNote } from "@/app/actions/note";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Plus } from "lucide-react";
 
 export function AddNote() {
-  const ref = React.useRef<HTMLFormElement>(null);
+  const ref = useRef<HTMLFormElement>(null);
 
   return (
     <form

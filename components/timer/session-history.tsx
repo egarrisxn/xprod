@@ -1,12 +1,12 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import { getSessions, deleteSession } from "@/app/actions/timer";
+import type { Timer } from "@/utils/types";
 import { formatSessionHistory } from "@/utils/helpers";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
-import type { Timer } from "@/utils/types";
 
 export function SessionHistory() {
   const [sessions, setSessions] = useState<Timer[]>([]);
