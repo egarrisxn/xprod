@@ -1,9 +1,10 @@
+import type { User } from "@/utils/types";
 import { createClient } from "@/utils/supabase/server";
 
-export default async function DisplayName({ user }: { user: any }) {
+export default async function DisplayName({ user }: { user: User }) {
   const supabase = await createClient();
 
-  async function getUsername(userId: string, supabase: any) {
+  async function getUsername(userId: string) {
     const { data, error } = await supabase
       .from("profiles")
       .select("username")
@@ -17,7 +18,7 @@ export default async function DisplayName({ user }: { user: any }) {
     return data?.username || null;
   }
 
-  const username = user?.id ? await getUsername(user.id, supabase) : null;
+  const username = user?.id ? await getUsername(user.id) : null;
 
   return <>{username || user?.email || "Guest"}</>;
 }

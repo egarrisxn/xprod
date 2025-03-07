@@ -26,7 +26,7 @@ export default async function QuickNotes() {
   const notes = await getNotes();
 
   return (
-    <section className="max-w-2xl p-2">
+    <section className="max-w-3xl p-2">
       <div className="flex flex-col rounded-lg border bg-card p-4 shadow-lg dark:border-foreground">
         <div className="flex items-center gap-4 pb-4">
           <Files className="size-8 text-gray-500 dark:text-gray-400" />

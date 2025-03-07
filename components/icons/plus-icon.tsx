@@ -1,4 +1,6 @@
-export default function PlusIcon(props: any) {
+import React from "react";
+
+export default function PlusIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

@@ -25,8 +25,8 @@ export default async function EditProfilePage() {
     .single();
 
   return (
-    <section className="grid min-h-screen w-full place-items-center p-4 sm:p-6 lg:px-0">
+    <div className="grid min-h-screen w-full place-items-center">
       <EditProfile user={user} profile={profile} />
-    </section>
+    </div>
   );
 }

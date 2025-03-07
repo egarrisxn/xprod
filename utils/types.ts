@@ -23,8 +23,19 @@ export interface ProfileData {
   avatar_url: string | null;
 }
 
+export interface User {
+  id: string;
+  email?: string;
+  avatar_url?: string;
+}
+
 export interface ProfileAvatarProps {
   size?: number;
+  user: User;
+}
+
+export interface ProfileCardProps {
+  user: User;
 }
 
 export interface Quote {

@@ -11,15 +11,17 @@ export const metadata: Metadata = {
 
 export default function DashboardPage() {
   return (
-    <div className="container mx-auto grid min-h-screen w-full grid-cols-1 place-items-center">
-      <div className="mx-auto flex flex-col justify-center gap-4 p-2 sm:p-6 xl:px-0">
-        <CalendarEvents />
-        <div className="flex flex-col lg:flex-row">
-          <div className="flex flex-1 flex-col">
+    <div className="mx-auto grid min-h-screen w-full border-2">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-2 pb-28 pt-40 sm:px-6 xl:px-0">
+        <div className="mx-auto flex lg:w-full">
+          <CalendarEvents />
+        </div>
+        <div className="mx-auto flex flex-col lg:w-full lg:flex-row lg:gap-2">
+          <div className="order-2 flex flex-1 flex-col lg:order-1">
             <TodoList />
             <QuickNotes />
           </div>
-          <div className="x">
+          <div className="order-1 flex lg:order-2">
             <PomodoroTimer />
           </div>
         </div>

@@ -51,9 +51,9 @@ export default function EditProfile({
   }
 
   return (
-    <div className="mx-auto mb-16 flex max-w-4xl flex-col items-center justify-center gap-4 px-2 sm:rounded-lg sm:border sm:bg-card sm:px-12 sm:py-8 sm:shadow-lg dark:border-foreground">
-      <h1 className="text-center text-2xl font-bold">Edit Profile</h1>
-      <form className="mx-auto mb-16 flex max-w-4xl flex-col items-center justify-center gap-8 px-2 sm:rounded-lg sm:bg-card sm:px-8 sm:pt-4">
+    <div className="mx-auto mt-8 flex w-full max-w-xl flex-col items-center justify-center gap-2 px-2 sm:rounded-lg sm:border sm:bg-card sm:px-8 sm:py-12 sm:shadow-lg dark:border-foreground">
+      <h1 className="text-center text-xl font-bold">Edit Profile</h1>
+      <form className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 sm:rounded-lg sm:bg-card">
         <UploadAvatar uid={user?.id ?? null} url={avatarUrl} size={160} onUpload={setAvatarUrl} />
         <div className="space-y-4">
           <div className="space-y-2">

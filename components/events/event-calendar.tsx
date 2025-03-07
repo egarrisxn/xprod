@@ -120,7 +120,7 @@ export function EventCalendar() {
   return (
     <div className="grid gap-6 lg:grid-cols-[400px_1fr]">
       <div className="space-y-4">
-        <Card className="p-4">
+        <Card className="p-8 lg:p-4">
           <Calendar
             mode="single"
             selected={date}

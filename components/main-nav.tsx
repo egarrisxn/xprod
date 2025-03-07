@@ -22,10 +22,16 @@ export default async function MainNav() {
   } = await supabase.auth.getUser();
 
   return (
-    <header className="z-50 w-full">
-      <div className="container flex items-center justify-between p-4 sm:px-6">
+    <header className="absolute top-0 z-50 w-full">
+      <div className="container mx-auto flex flex-row items-center justify-between p-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/prod-logo.png" alt="nav-icon" width={32} height={32} />
+          <Image
+            src="/svgs/logo.svg"
+            alt="nav-icon"
+            width={48}
+            height={48}
+            className="size-8 sm:size-12"
+          />
         </Link>
 
         <div className="flex items-center gap-3">

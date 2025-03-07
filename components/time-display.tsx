@@ -15,7 +15,7 @@ const TimeOfDay = () => {
       {time.toLocaleTimeString("en-US", {
         hour: "numeric",
         minute: "numeric",
-        // second: 'numeric',
+        // second: "numeric",
         hour12: true,
         timeZone: "America/New_York",
       })}

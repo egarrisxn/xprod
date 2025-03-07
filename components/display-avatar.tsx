@@ -2,10 +2,7 @@ import Image from "next/image";
 import { createClient } from "@/utils/supabase/server";
 import type { ProfileAvatarProps } from "@/utils/types";
 
-export default async function DisplayAvatar({
-  user,
-  size = 40,
-}: ProfileAvatarProps & { user: any }) {
+export default async function DisplayAvatar({ user, size = 40 }: ProfileAvatarProps) {
   if (!user) return null;
 
   const supabase = await createClient();
