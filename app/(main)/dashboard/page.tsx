@@ -6,12 +6,12 @@ import CalendarEvents from "@/components/events/calendar-events";
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "My dashboard.",
+  description: "Private Dashboard on XProd.",
 };
 
 export default function DashboardPage() {
   return (
-    <div className="mx-auto grid min-h-screen w-full border-2">
+    <div className="mx-auto grid min-h-screen w-full">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-2 pb-28 pt-40 sm:px-6 xl:px-0">
         <div className="mx-auto flex lg:w-full">
           <CalendarEvents />
