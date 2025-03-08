@@ -1,8 +1,15 @@
-export default function TermsOfService() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "THE TOC Page for XProd.",
+};
+
+export default function TermsOfServicePage() {
   return (
-    <div className="mx-auto grid min-h-screen w-full">
-      <div className="mx-auto max-w-4xl p-6">
-        <h1 className="mb-4 text-3xl font-bold">Terms of Service</h1>
+    <div className="mx-auto grid min-h-screen w-full place-items-center">
+      <div className="mx-auto max-w-2xl space-y-2">
+        <h1 className="text-3xl font-bold">Terms of Service</h1>
         <p>
           THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
           INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR

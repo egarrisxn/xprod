@@ -4,7 +4,7 @@ import EditProfile from "@/components/profile/edit-profile";
 
 export const metadata: Metadata = {
   title: "Edit Profile",
-  description: "Edit my profile.",
+  description: "Edit your XProd profile.",
 };
 
 export default async function EditProfilePage() {
