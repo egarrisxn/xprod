@@ -61,7 +61,7 @@ export default function EditProfile({
               Email
             </Label>
             <div className="relative">
-              <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <Mail className="absolute left-3 top-3 size-4 text-muted-foreground" />
               <Input id="email" type="text" value={user?.email} disabled className="pl-10" />{" "}
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function EditProfile({
               Name
             </Label>
             <div className="relative">
-              <UserIcon className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <UserIcon className="absolute left-3 top-3 size-4 text-muted-foreground" />
               <Input
                 id="fullName"
                 type="text"
@@ -85,7 +85,7 @@ export default function EditProfile({
               Username
             </Label>
             <div className="relative">
-              <AtSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <AtSign className="absolute left-3 top-3 size-4 text-muted-foreground" />
               <Input
                 id="username"
                 type="text"
@@ -100,7 +100,7 @@ export default function EditProfile({
               Website
             </Label>
             <div className="relative">
-              <Globe className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <Globe className="absolute left-3 top-3 size-4 text-muted-foreground" />
               <Input
                 id="website"
                 type="url"

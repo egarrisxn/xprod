@@ -19,7 +19,7 @@ export function AddTodo() {
       }}
     >
       <Button className="h-5 min-w-5 rounded-sm bg-gradient-to-r from-indigo-500 to-purple-500 p-0 hover:from-indigo-600 hover:to-purple-600">
-        <PlusIcon className="h-4 w-4" />
+        <PlusIcon className="size-5" />
       </Button>
       <Input
         id="task"

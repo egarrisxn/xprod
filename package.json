@@ -81,5 +81,10 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
