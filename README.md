@@ -10,34 +10,41 @@
 
 ![xprod](https://github.com/user-attachments/assets/6408ffd3-433f-4b90-aad2-d1d847222f13)
 
-## Table of Contents
+## 🚀 Overview
 
-- [Overview](#overview)
-- [Technologies](#technologies)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+**XPROD** is a modern, full-stack productivity application designed to streamline your workflow and enhance focus. Built with cutting-edge web technologies, XPROD combines intuitive design with powerful developer tooling to create a seamless productivity experience.
 
-## Overview
+## 🧱 Tech Stack
 
-**xprod** is an all-in-one productivity application designed to streamline task and event management for individuals or teams. It combines modern web technologies for a fast, efficient, and user-friendly experience.
+### ⚙️ Framework & Language
+- **Next.js (v15)** – React framework with routing, server rendering, and API support.
+- **React (v19)** – Declarative UI library for interactive interfaces.
+- **TypeScript** – Type-safe superset of JavaScript for code development.
 
-## Technologies
+### 🎨 Styling & Design
+- **Tailwind CSS (v4)** – Utility-first CSS framework for rapid UI development.
+- **Radix UI** – Unstyled, accessible primitives for custom UI components.
+- **ShadCN UI** – Pre-styled Radix components with Tailwind integration.
+- **Motion** – UI animation library for smooth, declarative transitions.
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Programming Language**: [TypeScript](https://www.typescriptlang.org/), [JavaScript (React)](https://reactjs.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **State Management**: [Radix UI](https://www.radix-ui.com/)
-- **Date Management**: [date-fns](https://date-fns.org/)
-- **Database**: [Supabase](https://supabase.com/)
-- **Icons**: [lucide-react](https://lucide.dev/)
+### 📝 Forms & Validation
+- **react-hook-form** – Performant form handling with minimal re-renders.
+- **zod + @hookform/resolvers** – Type-safe schema validation integrated with forms.
 
-## Features
+### 🔐 Authentication & Database
+- **Supabase** – Backend-as-a-Service:
+  - **Authentication** – Secure login and session handling.
+  - **Database** – PostgreSQL for structured data management.
+
+### 🧰 Tooling & Developer Experience
+- **pnpm** – Fast and efficient package manager.
+- **ESLint + Prettier** – Linting and consistent code formatting.
+- **Vercel** – Deployment, hosting, and built-in CI/CD pipeline.
+
+### 📊 Analytics & Monitoring
+- **Vercel Analytics** – Real-time performance and traffic insights.
+
+## ✨ Key Features
 
 - **Event Calendar**: View and manage events seamlessly.
 - **Task Management**: Create, edit, and delete tasks efficiently.
@@ -45,7 +52,7 @@
 - **Light/Dark Mode Support**: Toggle between themes using `next-themes`.
 - **UI Components**: Built with Radix UI for accessible and customizable components.
 
-## Getting Started
+## 📦 Installation & Setup
 
 To get a local copy up and running, follow these simple steps.
 
@@ -54,7 +61,7 @@ To get a local copy up and running, follow these simple steps.
 - **Node.js** (v18 or higher)
 - **pnpm** (recommended for package management)
 
-## Installation
+### Installation
 
 1. Clone the repo:
 
@@ -73,7 +80,7 @@ To get a local copy up and running, follow these simple steps.
    pnpm install
    ```
 
-## Usage
+### Usage
 
 - To run the development server:
 
@@ -104,18 +111,46 @@ To get a local copy up and running, follow these simple steps.
   pnpm format
   ```
 
-## Deployment
+## 🚀 Deployment
 
-Deploy the project on a hosting platform that supports Next.js, such as Vercel, Netlify, or any other cloud provider. Ensure you have set up your environment variables correctly on the hosting platform.
+Deploy the project on any modern platform that supports **Next.js**, such as:
 
-## Contributing
+- ▲ **[Vercel](https://vercel.com)** – Native support for Next.js with serverless functions and analytics.
+- 🌐 **[Netlify](https://netlify.com)** – Alternative hosting with easy CI/CD.
+- ☁️ Any other cloud provider (AWS, Render, Railway, etc.)
 
-Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
+> ⚠️ Make sure to configure all required environment variables in your platform dashboard.
 
-## License
+---
 
-This project is licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🤝 Contributing
 
-## Contact
+Contributions are welcome!  
+If you have ideas, improvements, or bug fixes, feel free to:
 
-If you have any questions or need further assistance, feel free to reach out via GitHub: [egarrisxn](https://github.com/egarrisxn) and/or Email: [egarrisxn@gmail.com](mailto:egarrisxn@gmail.com).
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request (PR)
+
+> For larger features, consider opening a discussion or issue first.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+You're free to use, modify, and distribute with attribution.
+
+---
+
+## 📬 Contact
+
+Have questions or suggestions? Feel free to reach out:
+
+- 👤 GitHub: [egarrisxn](https://github.com/egarrisxn)
+- 📧 Email: [egarrisxn@gmail.com](mailto:egarrisxn@gmail.com)
+
+---
+
+_Thank you for checking out **XPROD**!_
+
