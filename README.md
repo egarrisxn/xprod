@@ -1,8 +1,14 @@
 # xprod 
 
-![xprod](https://github.com/user-attachments/assets/6408ffd3-433f-4b90-aad2-d1d847222f13)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/xprod)
+![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/xprod)
+[![pnpm](https://img.shields.io/badge/package%20manager-pnpm-blueviolet)](https://pnpm.io)
+[![Next.js](https://img.shields.io/badge/Next.js-v15-black?logo=next.js)](https://nextjs.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-blue?logo=tailwindcss)](https://tailwindcss.com)
+[![Vercel](https://img.shields.io/badge/Vercel-deployed-brightgreen?logo=vercel)](https://international-worldwide.vercel.app)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/xprod) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/xprod)
+![xprod](https://github.com/user-attachments/assets/6408ffd3-433f-4b90-aad2-d1d847222f13)
 
 ## Table of Contents
 
