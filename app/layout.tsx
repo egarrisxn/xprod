@@ -77,7 +77,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-       <head><meta name='apple-mobile-web-app-title' content={siteConfig.name} /></head>
+      <head>
+        <meta name="apple-mobile-web-app-title" content={siteConfig.name} />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider
           attribute="class"

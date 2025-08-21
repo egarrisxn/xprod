@@ -6,20 +6,12 @@
   "author": "Ethan G. (https://egxo.dev)",
   "license": "MIT",
   "private": true,
-  "keywords": [
-    "typesctipt",
-    "nextjs",
-    "react",
-    "tailwindcss",
-    "vercel"
-  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prebuild": "pnpm run lint",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "next-lint": "next lint",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --check .",
@@ -80,7 +72,8 @@
     "jsxSingleQuote": false,
     "plugins": [
       "prettier-plugin-tailwindcss"
-    ]
+    ],
+    "tailwindStylesheet": "./app/globals.css"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
