@@ -12,7 +12,7 @@ export async function getNotes(): Promise<Note[]> {
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("notes")
+    .from("xprod_notes")
     .select("*")
     .eq("user_id", user?.id);
   if (error) throw new Error(`Error fetching notes: ${error.message}`);
@@ -27,7 +27,7 @@ export async function addNote(formData: FormData) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("notes")
+    .from("xprod_notes")
     .insert([
       {
         thought: formData.get("thought") as string,
@@ -48,7 +48,7 @@ export async function editNote(note: Note) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("notes")
+    .from("xprod_notes")
     .update({ thought: note.thought })
     .eq("id", note.id)
     .eq("user_id", user?.id)
@@ -59,7 +59,7 @@ export async function editNote(note: Note) {
 //! Delete note
 export async function deleteNote(id: number) {
   const supabase = await createClient();
-  const { error } = await supabase.from("notes").delete().eq("id", id);
+  const { error } = await supabase.from("xprod_notes").delete().eq("id", id);
   if (error) throw new Error(`Error deleting note: ${error.message}`);
   revalidatePath("/dashboard");
 }

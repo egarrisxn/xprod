@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/server";
 
-//! Get timer sessions
+//! Get xprod_timer sessions
 export async function getSessions() {
   const supabase = await createClient();
   const {
@@ -10,7 +10,7 @@ export async function getSessions() {
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("timer")
+    .from("xprod_timer")
     .select("*")
     .eq("user_id", user?.id)
     .order("started_at", { ascending: false });
@@ -20,7 +20,7 @@ export async function getSessions() {
   return data || [];
 }
 
-//! Add timer sessions
+//! Add xprod_timer sessions
 export async function addSession(
   mode: "work" | "shortBreak" | "longBreak",
   duration: number
@@ -31,7 +31,7 @@ export async function addSession(
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("timer")
+    .from("xprod_timer")
     .insert([
       {
         user_id: user?.id,
@@ -49,7 +49,7 @@ export async function addSession(
   return data ? data[0] : null;
 }
 
-//! Complete timer session
+//! Complete xprod_timer session
 export async function completeSession(id: number) {
   const supabase = await createClient();
   const {
@@ -57,7 +57,7 @@ export async function completeSession(id: number) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("timer")
+    .from("xprod_timer")
     .update({ is_complete: true })
     .eq("id", id)
     .eq("user_id", user?.id);
@@ -68,7 +68,7 @@ export async function completeSession(id: number) {
   return true;
 }
 
-//! Delete timer session
+//! Delete xprod_timer session
 export async function deleteSession(id: number) {
   const supabase = await createClient();
   const {
@@ -76,7 +76,7 @@ export async function deleteSession(id: number) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("timer")
+    .from("xprod_timer")
     .delete()
     .eq("id", id)
     .eq("user_id", user?.id);

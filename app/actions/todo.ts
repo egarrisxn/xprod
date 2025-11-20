@@ -12,7 +12,7 @@ export async function getTodos(): Promise<Todo[]> {
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .select("*")
     .eq("user_id", user?.id);
   if (error) throw new Error(`Error fetching to-dos: ${error.message}`);
@@ -27,7 +27,7 @@ export async function addTodo(formData: FormData) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .insert([
       {
         task: formData.get("task") as string,
@@ -49,7 +49,7 @@ export async function editTodo(todo: Todo) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .update({ task: todo.task })
     .eq("id", todo.id)
     .eq("user_id", user?.id)
@@ -60,7 +60,7 @@ export async function editTodo(todo: Todo) {
 //! Delete to-do
 export async function deleteTodo(id: number) {
   const supabase = await createClient();
-  const { error } = await supabase.from("todos").delete().eq("id", id);
+  const { error } = await supabase.from("xprod_todos").delete().eq("id", id);
   if (error) throw new Error(`Error deleting to-do: ${error.message}`);
   revalidatePath("/dashboard");
 }
@@ -69,7 +69,7 @@ export async function deleteTodo(id: number) {
 export async function deleteCompletedTodos() {
   const supabase = await createClient();
   const { error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .delete()
     .eq("is_complete", true);
   if (error)
@@ -84,7 +84,7 @@ export async function deleteAllTodos() {
     data: { user },
   } = await supabase.auth.getUser();
   const { error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .delete()
     .eq("user_id", user?.id);
   if (error) throw new Error(`Error deleting all to-dos: ${error.message}`);
@@ -94,7 +94,7 @@ export async function deleteAllTodos() {
 export async function onCheckChange(todo: Todo) {
   const supabase = await createClient();
   const { error } = await supabase
-    .from("todos")
+    .from("xprod_todos")
     .update({ is_complete: !todo?.is_complete })
     .eq("id", todo?.id)
     .select();
