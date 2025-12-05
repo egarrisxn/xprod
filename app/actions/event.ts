@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/server";
 
-//! Get events
+//! Get xprod_events
 export async function getEvents(date: string) {
   const supabase = await createClient();
   const {
@@ -10,7 +10,7 @@ export async function getEvents(date: string) {
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("events")
+    .from("xprod_events")
     .select("*")
     .eq("date", date)
     .eq("user_id", user?.id)
@@ -32,7 +32,7 @@ export async function addEvent(
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("events")
+    .from("xprod_events")
     .insert([
       {
         date,
@@ -64,7 +64,7 @@ export async function updateEvent(
   } = await supabase.auth.getUser();
 
   const { data, error } = await supabase
-    .from("events")
+    .from("xprod_events")
     .update({
       time,
       title,
@@ -88,7 +88,7 @@ export async function deleteEvent(id: number) {
   } = await supabase.auth.getUser();
 
   const { error } = await supabase
-    .from("events")
+    .from("xprod_events")
     .delete()
     .eq("id", id)
     .eq("user_id", user?.id);
