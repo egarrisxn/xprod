@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  reactCompiler: true,
+  // reactCompiler: true,
   // cacheComponents: true,
 };
 

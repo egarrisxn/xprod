@@ -9,13 +9,17 @@ const eslintConfig = defineConfig([
   {
     rules: {
       "@next/next/no-img-element": "off",
-      // "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
     },
   },
   globalIgnores([
     ".next/**",
     ".git/**",
     ".vscode/**",
+    ".vercel/**",
+    "coverage/**",
+    "node_modules/**",
+    "dist/**",
     "public/**",
     "out/**",
     "build/**",
